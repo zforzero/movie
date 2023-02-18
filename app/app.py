@@ -15,7 +15,7 @@ def hello_world():
         myage = request.form['age']
         mysalary = request.form['salary']
         mystatus = request.form['status']
-        if str(myage) =='' or str(mygender) =='' or str(mystatus) ==''
+        if str(myage) =='' or str(mygender) =='' or str(mystatus) =='':
             return render_template('index.html', href2='Please insert your age, salary and marital status.')
         else:
             model = load('app/movie-recommender.joblib')
